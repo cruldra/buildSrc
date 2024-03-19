@@ -1,7 +1,8 @@
 import org.gradle.api.artifacts.dsl.RepositoryHandler
 import java.net.URI
 
-const val KOTLIN_VERSION = "1.9.23"
+const val KOTLIN_VERSION = "1.9.10"
+const val SPRING_DEPENDENCY_MANAGEMENT_VERSION="1.1.3"
 fun RepositoryHandler.aliYun() {
     val aliyunMavenUrl = "https://maven.aliyun.com/repository/public"
     maven { url = URI(aliyunMavenUrl) }
