@@ -1,7 +1,7 @@
 import org.gradle.api.artifacts.dsl.RepositoryHandler
 import java.net.URI
 
-
+const val KOTLIN_VERSION = "1.8.20"
 fun RepositoryHandler.aliYun() {
     val aliyunMavenUrl = "https://maven.aliyun.com/repository/public"
     maven { url = URI(aliyunMavenUrl) }
@@ -19,10 +19,6 @@ fun RepositoryHandler.nexus() {
     }
 }
 
-fun RepositoryHandler.local() {
-    mavenLocal()
-}
-
 
 /**
  * 添加三个仓库
@@ -33,5 +29,4 @@ fun RepositoryHandler.local() {
 fun RepositoryHandler.aliYunAndNexus() {
     aliYun()
     nexus()
-    local()
 }
